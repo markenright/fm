@@ -1,0 +1,13 @@
+
+Schema:
+3 table - 
+Manager - id and name
+Team - id, name, manager_id, player_id
+Player - id, name, number
+
+Pages:
+index - form for manager to enter name and password
+sends to team page
+can select a team or create a new one
+Team page - see list of players, remove or add player
+
