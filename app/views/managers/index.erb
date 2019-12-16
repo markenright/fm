@@ -1,0 +1,13 @@
+<h1>List of Managers</h1>
+
+
+<ul>
+  <% @managers.each do |manager| %>
+     <li><a href="/managers/<%= manager.id %>"><%= manager.name %>
+     </a> | <li><%= manager.team %></li>
+     <% end %>
+</ul>
+
+
+
+<a href="/managers/new">Create a new Manager</a>
