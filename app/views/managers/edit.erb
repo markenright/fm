@@ -1,7 +1,8 @@
 <h1>Edit Manager</h1>
 
 
-<form method="POST" action="/managers/<%= @manager.id %>">
+
+<form method="post" action="/managers/<%= @manager.id %>">
     <input type="hidden" id="hidden" name="_method" value="PATCH">
     <br>
     <label>Name:</label>
@@ -11,7 +12,8 @@
     <label>Age:</label>
     <input type="integer" name="age" value="<%= @manager.age %>">
     <br>
-    <input type="submit">
+   
+    <input type="submit" value="Edit">
 </form>
 
 
