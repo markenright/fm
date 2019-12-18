@@ -1,0 +1,23 @@
+<h1>Edit Manager</h1>
+
+
+<form method="POST" action="/managers/<%= @manager.id %>">
+    <input type="hidden" id="hidden" name="_method" value="PATCH">
+    <br>
+    <label>Name:</label>
+    <input type="text" name="name" value="<%= @manager.name %>">
+    <br>
+    
+    <label>Age:</label>
+    <input type="integer" name="age" value="<%= @manager.age %>">
+    <br>
+    <input type="submit">
+</form>
+
+
+
+
+<h2>Delete Manager</h2>>
+<form action="/managers/<%= @manager.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />  
+  <input id="mysubmit" type="submit" value="Delete Manager" /></form>
