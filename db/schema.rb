@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20191216203643) do
   create_table "managers", force: :cascade do |t|
     t.string  "name"
     t.integer "age"
+    t.integer "team_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -25,7 +26,7 @@ ActiveRecord::Schema.define(version: 20191216203643) do
 
   create_table "teams", force: :cascade do |t|
     t.string  "name"
-    t.integer "manager_id"
+    t.string  "country"
     t.integer "player_id"
   end
 

@@ -1,4 +1,4 @@
 class Team < ActiveRecord::Base
-    has_many :managers
+    belongs_to :manager
     has_many :players
 end

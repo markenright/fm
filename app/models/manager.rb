@@ -1,3 +1,3 @@
 class Manager < ActiveRecord::Base
-    belongs_to :team
+    has_many :teams
 end
