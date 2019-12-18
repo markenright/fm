@@ -1,0 +1,13 @@
+<% if !!@error_message %>
+    <p class="danger"><%= @error_message %></p>
+<% end %>
+
+<form action="/teams/<%=@team.id%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%=@team.name%>"><br>
+    <label for="country">Country:</label>
+    <input type="text" name="country" id="country" value="<%=@team.country%>"><br>
+    
+    <input type="submit" value="Edit">
+</form>
