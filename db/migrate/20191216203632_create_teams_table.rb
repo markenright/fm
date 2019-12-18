@@ -3,7 +3,7 @@ class CreateTeamsTable < ActiveRecord::Migration[5.2]
     create_table :teams do |t|
       t.integer :user_id
       t.string :name
-      t.string :county
+      t.string :country
       
       t.timestamps
     end

@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_12_16_203643) do
   create_table "teams", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
-    t.string "county"
+    t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

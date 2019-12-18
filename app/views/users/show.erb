@@ -1,3 +1,28 @@
-<h3>My Teams</h3><br>
 
-<p><a href="/teams/index">See your teams</a></p>
+<h4>Teams managed by <%= @user.name %></h4><br><hr>
+
+
+ <% @user.teams.each do |team| %> 
+    <div class="container">
+        <div class="row justify-content-md-center"> 
+            <div class="col-sm">
+                <p>Name</p>
+                <h5><%= team.name %></h5>
+            </div>
+            <div class="col-sm">
+                <p>Country</p>
+                <h5><%= team.country %></h5>
+            </div>
+            
+        </div>
+        <div class="row">
+            <button type="submit" >
+                <a href="/teams/<%=team.id%>/edit">Update</a>
+            </button>
+            <form action="/teams/<%=team.id%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div><hr><br>
+    <% end %>
