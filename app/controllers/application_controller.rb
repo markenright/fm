@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
         set :views, 'app/views'
         set :public_folder, 'public'
         enable :sessions
+        # sends cookie to user
         set :session_secret, ENV['SESSION_SECRET']
         set :show_exceptions, false  #enable in dev env by default
 

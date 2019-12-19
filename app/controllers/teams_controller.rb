@@ -31,7 +31,7 @@ class TeamsController < ApplicationController
 
     #edit team entry and save
     patch '/teams/:id' do
-        puts "DO WE GET HERE?????"
+        
         user = current_user
         @team = Team.find_by(id: params[:id])
         authorize_user(@team)
