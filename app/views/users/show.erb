@@ -4,25 +4,32 @@
 
  <% @user.teams.each do |team| %> 
     <div class="container">
-        <div class="row justify-content-md-center"> 
-            <div class="col-sm">
-                <p>Name</p>
-                <h5><%= team.name %></h5>
-            </div>
-            <div class="col-sm">
-                <p>Country</p>
-                <h5><%= team.country %></h5>
-            </div>
+        
             
-        </div>
+                <p>Team Name: <%= team.name %></p>
+                <p></p>
+            
+           
+                <p>Country: <%= team.country %></p>
+                <p></p>
+            
+            
+       
         <div class="row">
             <button type="submit" >
                 <a href="/teams/<%=team.id%>/edit">Update</a>
             </button>
+
             <form action="/teams/<%=team.id%>" method="post">
                 <input type="hidden" name="_method" value="delete">
                 <input type="submit" value="Delete">
             </form>
         </div>
-    </div><hr><br>
+    </div>
+    <br>
     <% end %>
+
+
+<a href="/home">Back</a> <br/>
+
+<a href="/logout">Logout</a>

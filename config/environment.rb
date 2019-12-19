@@ -9,7 +9,7 @@ end
 
 
 
-require_relative '../constants'
+#require_relative '../constants'
 require_relative '../errors/post_site_error'
 
 require_all 'errors'
