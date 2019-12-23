@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
         enable :sessions
         # sends cookie to user
         set :session_secret, ENV['SESSION_SECRET']
+        
         set :show_exceptions, false  #enable in dev env by default
 
     end
@@ -31,7 +32,7 @@ class ApplicationController < Sinatra::Base
         def logged_in?   
             !!User.find_by(id: session[:user_id])
         end
-
+ 
         def current_user
             user = User.find_by(id: session[:user_id])
             raise AuthenticationError.new if user.nil?

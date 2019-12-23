@@ -15,10 +15,17 @@ class TeamsController < ApplicationController
     post '/teams' do     
         authorize
         user = current_user
-        user.teams.build(name: params[:name], country: params[:country])
-        raise PostSiteError.new if !user.save
+        if params[:name] == "" or params[:country] == ""
+            
+            @error_message = "Team and country must have values"
+            erb :'teams/new'
+        else
+
+            user.teams.build(name: params[:name], country: params[:country])
+            raise PostSiteError.new if !user.save
         
-        redirect '/home'
+            redirect '/home'
+        end
     end
 
     

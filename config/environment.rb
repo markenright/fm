@@ -7,7 +7,7 @@ configure :development do
     set :database, 'sqlite3:db/database.db'
 end
 
-
+ENV['SESSION_SECRET'] = "tester"
 
 
 require_relative '../errors/post_site_error'
