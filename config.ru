@@ -7,4 +7,5 @@ use Rack::MethodOverride
 use SessionController
 use TeamsController
 use UsersController
+use PlayersController
 run ApplicationController

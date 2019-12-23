@@ -2,6 +2,7 @@
 <h4>Teams managed by <%= @user.name %></h4><br><hr>
 
 
+
  <% @user.teams.each do |team| %> 
     <div class="container">
         
@@ -19,9 +20,11 @@
      
        <% if team.user_id == user.id %>
          <div class="row">
+         
+            <a href="/teams/<%=team.id%>">Show Players on this team</a> <br/>
 
             <button type="submit" >
-                <a href="/teams/<%=team.id%>/edit">Update</a>
+                <a href="/teams/<%=team.id%>/edit">Edit Team Info</a>
             </button>
 
             <form action="/teams/<%=team.id%>" method="post">
@@ -29,6 +32,9 @@
                 <input type="submit" value="Delete">
             </form>
             </div>
+
+
+
         <% end %>
 
 

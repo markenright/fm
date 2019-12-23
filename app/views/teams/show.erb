@@ -1,0 +1,20 @@
+
+<h4>Players on team <%= @team.name %>, located in <%= @team.country%> </h4>
+
+<%  %>
+
+ <% @players.each do |player| %> 
+    <div class="container">
+        
+            
+                <p>Player Name: <%= player.name %></p>
+                <p></p>
+            
+           
+                <p>Uniform: <%= player.uniform_number %></p>
+                <p></p>
+<% end %>
+
+<p><a href="/players/new">Add a new player</a></p>
+<br/>
+

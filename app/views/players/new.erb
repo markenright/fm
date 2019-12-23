@@ -1,0 +1,14 @@
+<% if !!@error_message %>
+    <p class="danger"><%= @error_message %></p>
+<% end %>
+
+<form action='/players' method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name"><br>
+    <label for="uniform_number">Uniform Number:</label>
+    <input type="text" name="uniform_number" id="uniform_number"><br>
+    
+    <input type="submit" value="Add">
+</form>
+
+<a href="/home">Back</a> </br>

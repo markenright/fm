@@ -11,6 +11,16 @@ class TeamsController < ApplicationController
         erb :'teams/new'
     end
 
+
+    get '/teams/:id' do
+        @team = Team.find_by(id: params[:id])
+        @players = Player.all
+        #link to its user???
+        # how does user know its teams?
+        #binding.pry 
+        erb :'teams/show'
+    end
+
     #create new team and save
     post '/teams' do     
         authorize

@@ -3,7 +3,7 @@ class CreatePlayersTable < ActiveRecord::Migration[5.2]
     create_table :players do |t|
          t.string :name
          t.string :uniform_number
-         t.string :team_id
+         t.integer :team_id
          
     end
   end
